@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 from trusted_domains import TRUSTED_DOMAINS
 
 # Load HuggingFace phishing detection model
-classifier = pipeline("text-classification", model="ml6team/bert-base-uncased-finetuned-phishing")
+classifier = pipeline("text-classification", model=("mrm8488/bert-tiny-finetuned-sms-spam-detection")
 
 def extract_links(text):
     return re.findall(r'https?://\S+', text)
